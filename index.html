@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mira Atelier — Objects for a quieter home</title>
+    <meta
+      name="description"
+      content="Mira Atelier is a small shop for furniture, ceramics, textiles, and lighting made to last."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#shop">Skip to shop</a>
+
+    <div class="announce">
+      <p>Complimentary shipping on orders over $150 · Made in small batches</p>
+    </div>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="#top" aria-label="Mira Atelier home">
+          <span class="logo-mark" aria-hidden="true">M</span>
+          <span>Mira Atelier</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#shop">Shop</a>
+          <a href="#collections">Collections</a>
+          <a href="#story">Our story</a>
+        </nav>
+
+        <div class="header-actions">
+          <label class="search">
+            <span class="visually-hidden">Search products</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="M20 20l-3.5-3.5"></path>
+            </svg>
+            <input id="search" type="search" placeholder="Search the atelier" autocomplete="off" />
+          </label>
+          <button class="icon-btn cart-btn" id="open-cart" type="button" aria-label="Open cart">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 7h15l-1.5 9h-12z"></path>
+              <path d="M6 7L5 4H2"></path>
+              <circle cx="9" cy="20" r="1.2"></circle>
+              <circle cx="18" cy="20" r="1.2"></circle>
+            </svg>
+            <span class="cart-count" id="cart-count" hidden>0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Autumn collection</p>
+          <h1>Objects for a quieter home.</h1>
+          <p class="lede">
+            Solid oak, hand-thrown clay, and linen that softens with every wash.
+            A small edit of pieces chosen to stay with you.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#shop">Shop the edit</a>
+            <a class="btn btn-ghost" href="#story">Read the story</a>
+          </div>
+          <dl class="hero-stats">
+            <div>
+              <dt>12</dt>
+              <dd>pieces in stock</dd>
+            </div>
+            <div>
+              <dt>Free</dt>
+              <dd>returns within 30 days</dd>
+            </div>
+            <div>
+              <dt>3 yr</dt>
+              <dd>craftsmanship guarantee</dd>
+            </div>
+          </dl>
+        </div>
+        <figure class="hero-figure">
+          <img
+            src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1400&q=80"
+            alt="Sunlit living room with a linen sofa and oak furniture"
+          />
+          <figcaption>
+            <span>Featured</span>
+            <strong>Oak lounge chair</strong>
+            <em>$640</em>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="collections" id="collections">
+        <div class="section-head">
+          <p class="eyebrow">Browse by room</p>
+          <h2>Collections</h2>
+        </div>
+        <div class="collection-grid">
+          <button class="collection-card" type="button" data-category="Seating">
+            <img
+              src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=900&q=80"
+              alt=""
+            />
+            <span>Seating</span>
+          </button>
+          <button class="collection-card" type="button" data-category="Textiles">
+            <img
+              src="https://images.unsplash.com/photo-1616628188859-7a11abb6fcc9?auto=format&fit=crop&w=900&q=80"
+              alt=""
+            />
+            <span>Textiles</span>
+          </button>
+          <button class="collection-card" type="button" data-category="Ceramics">
+            <img
+              src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=900&q=80"
+              alt=""
+            />
+            <span>Ceramics</span>
+          </button>
+          <button class="collection-card" type="button" data-category="Lighting">
+            <img
+              src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=80"
+              alt=""
+            />
+            <span>Lighting</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="shop" id="shop">
+        <div class="section-head shop-head">
+          <div>
+            <p class="eyebrow">The edit</p>
+            <h2>Shop all pieces</h2>
+          </div>
+          <label class="sort">
+            <span>Sort</span>
+            <select id="sort" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price, low to high</option>
+              <option value="price-desc">Price, high to low</option>
+              <option value="name">Name</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="filters" id="filters" role="tablist" aria-label="Filter by category">
+          <button class="chip is-active" type="button" data-category="all" role="tab" aria-selected="true">
+            All
+          </button>
+          <button class="chip" type="button" data-category="Seating" role="tab" aria-selected="false">Seating</button>
+          <button class="chip" type="button" data-category="Tables" role="tab" aria-selected="false">Tables</button>
+          <button class="chip" type="button" data-category="Textiles" role="tab" aria-selected="false">Textiles</button>
+          <button class="chip" type="button" data-category="Ceramics" role="tab" aria-selected="false">Ceramics</button>
+          <button class="chip" type="button" data-category="Lighting" role="tab" aria-selected="false">Lighting</button>
+          <button class="chip" type="button" data-category="Accessories" role="tab" aria-selected="false">
+            Accessories
+          </button>
+        </div>
+
+        <p class="result-count" id="result-count" aria-live="polite"></p>
+        <div class="product-grid" id="product-grid"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <h3>Nothing matches that search</h3>
+          <p>Try another material, or clear the filters to see the full edit.</p>
+          <button class="btn btn-ghost" id="clear-filters" type="button">Clear filters</button>
+        </div>
+      </section>
+
+      <section class="story" id="story">
+        <div class="story-copy">
+          <p class="eyebrow">The atelier</p>
+          <h2>We buy less, and we buy better.</h2>
+          <p>
+            Mira started as a weekend market stall in Portland. We still work with the same
+            four workshops — a chair maker in Oregon, a potter in Oaxaca, a weaver in
+            Kyoto, and a brass studio in Jaipur.
+          </p>
+          <p>
+            Every piece is numbered, repairable, and meant to outlast the season it arrived in.
+          </p>
+        </div>
+        <div class="story-panel">
+          <blockquote>
+            “A chair should feel inevitable. You sit down and forget you are sitting.”
+          </blockquote>
+          <p class="quote-by">— Elena Voss, founder</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p class="logo">Mira Atelier</p>
+        <p>Quiet goods for everyday rooms.</p>
+      </div>
+      <p>Demo storefront · No payment is processed</p>
+    </footer>
+
+    <aside class="drawer" id="cart-drawer" aria-hidden="true">
+      <div class="drawer-backdrop" data-close-cart></div>
+      <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+        <header class="drawer-head">
+          <h2 id="cart-title">Your cart</h2>
+          <button class="icon-btn" type="button" data-close-cart aria-label="Close cart">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18"></path>
+            </svg>
+          </button>
+        </header>
+        <div class="cart-items" id="cart-items"></div>
+        <footer class="drawer-foot" id="cart-foot" hidden>
+          <div class="totals">
+            <div>
+              <span>Subtotal</span>
+              <strong id="cart-subtotal">$0</strong>
+            </div>
+            <div>
+              <span>Shipping</span>
+              <strong id="cart-shipping">Calculated at checkout</strong>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block" id="checkout-btn" type="button">Checkout</button>
+          <p class="fine-print">Taxes calculated on the next step. This is a demonstration checkout.</p>
+        </footer>
+      </div>
+    </aside>
+
+    <div class="modal" id="product-modal" hidden>
+      <div class="modal-backdrop" data-close-product></div>
+      <div class="modal-panel product-panel" role="dialog" aria-modal="true" aria-labelledby="product-title">
+        <button class="icon-btn modal-close" type="button" data-close-product aria-label="Close product">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18"></path>
+          </svg>
+        </button>
+        <div id="product-detail"></div>
+      </div>
+    </div>
+
+    <div class="modal" id="checkout-modal" hidden>
+      <div class="modal-backdrop" data-close-checkout></div>
+      <div class="modal-panel checkout-panel" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+        <button class="icon-btn modal-close" type="button" data-close-checkout aria-label="Close checkout">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18"></path>
+          </svg>
+        </button>
+        <form id="checkout-form">
+          <p class="eyebrow">Checkout</p>
+          <h2 id="checkout-title">Where should we send it?</h2>
+          <div class="form-grid">
+            <label>
+              Full name
+              <input name="name" required autocomplete="name" placeholder="Elena Voss" />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" required autocomplete="email" placeholder="elena@atelier.com" />
+            </label>
+            <label class="span-2">
+              Street address
+              <input name="address" required autocomplete="street-address" placeholder="18 Hawthorne Lane" />
+            </label>
+            <label>
+              City
+              <input name="city" required autocomplete="address-level2" placeholder="Portland" />
+            </label>
+            <label>
+              Postal code
+              <input name="postal" required autocomplete="postal-code" placeholder="97214" />
+            </label>
+          </div>
+          <div class="checkout-summary" id="checkout-summary"></div>
+          <p class="form-error" id="form-error" hidden></p>
+          <button class="btn btn-primary btn-block" type="submit">Place order</button>
+          <p class="fine-print">No card is charged. This demo confirms the order on your device.</p>
+        </form>
+        <div class="order-success" id="order-success" hidden>
+          <p class="eyebrow">Order confirmed</p>
+          <h2>Thank you. It’s on its way.</h2>
+          <p id="order-message"></p>
+          <button class="btn btn-primary" id="continue-shopping" type="button">Continue shopping</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
