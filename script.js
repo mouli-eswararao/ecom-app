@@ -558,5 +558,3 @@ document.addEventListener("keydown", (event) => {
 
 renderProducts();
 renderCart();
-
-
